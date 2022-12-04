@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card.js';
-import './Body.css';
+import './Menu.css';
 
 function Body () {
   return (
