@@ -1,20 +1,26 @@
 .card {
+  display: grid;
+  place-items: center;
+
   width: 300px;
   height: 300px;
   border: none;
   background: #E8D15D;
 
   font-size: 20px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
 
   transition: 0.5s;
-  box-shadow: 0 0 0 1px black;
+  box-shadow: 0 0 0 1px;
   cursor: pointer;
 }
 
 .card:hover {
   background: #E8CB3A;
 
-  box-shadow: 0 0 0 1px black, 0 0 0 4px white, 0 0 0 6px black;
+  box-shadow: 0 0 0 1px, 0 0 0 4px white, 0 0 0 6px;
 }
 
 @media (max-width: 700px) {

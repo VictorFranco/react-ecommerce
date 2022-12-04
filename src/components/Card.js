@@ -1,11 +1,12 @@
 import React from 'react'
 import './Card.css';
+import {Link} from 'react-router-dom';
 
-function Card ({children}) {
+function Card ({children, link}) {
   return (
-    <button className='card'>
+    <Link className = 'card' to = {link}>
       {children}
-    </button>
+    </Link>
   );
 }
 

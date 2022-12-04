@@ -5,8 +5,8 @@ import './Body.css';
 function Body () {
   return (
     <div className='body'>
-      <Card>Captura de artículo</Card>
-      <Card>Compra de artículos</Card>
+      <Card link = "/Captura">Captura de artículo</Card>
+      <Card link = "/Compra">Compra de artículos</Card>
     </div>
   );
 }
