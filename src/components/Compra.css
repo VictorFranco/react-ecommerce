@@ -1,0 +1,44 @@
+.compra {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px 0;
+  background: #E8DB97;
+
+  font-family: sans-serif;
+}
+
+.compra form {
+  display: flex;
+
+  align-items: center;
+}
+
+.compra form > * {
+  margin: 0 10px;
+}
+
+.compra .button {
+  display: grid;
+  place-items: center;
+
+  border: none;
+  padding: 5px;
+
+  font-size: 16px;
+  text-decoration: none;
+
+  box-shadow: 0 0 0 1px black;
+  transition: 0.3s;
+}
+
+.compra .button:hover {
+  box-shadow: 0 0 0 1px black, 0 0 0 2px white, 0 0 0 4px black;
+}
+
+.compra .return {
+  margin-left: 10px;
+  background: black;
+
+  color: white;
+}

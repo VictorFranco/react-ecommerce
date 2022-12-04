@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header.js';
 import Menu from './components/Menu.js';
 import Captura from './components/Captura.js';
+import Compra from './components/Compra.js';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Menu />}/>
         <Route path='/Captura' element={<Captura />}/>
+        <Route path='/Compra' element={<Compra />}/>
       </Routes>
     </div>
   );
