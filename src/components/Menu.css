@@ -1,4 +1,4 @@
-.body {
+.menu {
   flex-grow: 1;
   display: flex;
   justify-content: space-evenly;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 700px) {
-  .body {
+  .menu {
     flex-direction: column;
   }
 }

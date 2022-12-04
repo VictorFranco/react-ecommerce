@@ -4,7 +4,7 @@ import './Menu.css';
 
 function Body () {
   return (
-    <div className='body'>
+    <div className='menu'>
       <Card link = "/Captura">Captura de artículo</Card>
       <Card link = "/Compra">Compra de artículos</Card>
     </div>
