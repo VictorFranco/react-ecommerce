@@ -1,10 +1,12 @@
 import React from 'react';
+import Card from './Card.js';
+import './Body.css';
 
 function Body () {
   return (
-    <div>
-      <div>Captura de artículo</div>
-      <div>Compra de artículos</div>
+    <div className='body'>
+      <Card>Captura de artículo</Card>
+      <Card>Compra de artículos</Card>
     </div>
   );
 }
