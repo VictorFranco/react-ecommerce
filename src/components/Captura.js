@@ -1,11 +1,11 @@
-import React from 'react';
-import './Captura.css';
-import {Link} from 'react-router-dom';
+import React from 'react'
+import './Captura.css'
+import {Link} from 'react-router-dom'
 
 function Captura () {
   return (
-    <div className='captura'>
-      <form className='captura'>
+    <div className='body captura'>
+      <form>
         <label>Nombre:</label><input type='text'/>
         <label>Descripción:</label><input type='text'/>
         <label>Precio:</label><input type='number'/>

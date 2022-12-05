@@ -1,12 +1,12 @@
-import React from 'react';
-import Card from './Card.js';
-import './Menu.css';
+import React from 'react'
+import Card from './Card.js'
+import './Menu.css'
 
 function Body () {
   return (
-    <div className='menu'>
-      <Card link = "/Captura">Captura de artículo</Card>
-      <Card link = "/Compra">Compra de artículos</Card>
+    <div className='body menu'>
+      <Card link="/Captura">Captura de artículo</Card>
+      <Card link="/Compra">Compra de artículos</Card>
     </div>
   );
 }

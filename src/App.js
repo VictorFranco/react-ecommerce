@@ -1,10 +1,11 @@
-import React from 'react';
-import {Route, Routes} from 'react-router-dom';
-import './App.css';
-import Header from './components/Header.js';
-import Menu from './components/Menu.js';
-import Captura from './components/Captura.js';
-import Compra from './components/Compra.js';
+import React from 'react'
+import {Route, Routes} from 'react-router-dom'
+import './App.css'
+import Header from './components/Header.js'
+import './components/Body.css'
+import Menu from './components/Menu.js'
+import Captura from './components/Captura.js'
+import Compra from './components/Compra.js'
 
 function App() {
   return (
