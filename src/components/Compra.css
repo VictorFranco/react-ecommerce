@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
 
+  position: sticky;
+  top: 65px;
+
   padding: 10px 0;
   background: #E8DB97;
 
