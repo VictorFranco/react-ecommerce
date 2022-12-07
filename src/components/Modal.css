@@ -1,0 +1,45 @@
+.modal {
+  display: grid;
+  place-items: center;
+
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.5);
+
+  font-family: sans-serif;
+}
+
+.modal>div {
+  display: flex;
+  gap: 20px;
+
+  width: 450px;
+  padding: 50px;
+  background: white;
+
+  box-sizing: border-box;
+}
+
+.modal>div img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.modal .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+
+  margin: auto;
+  font-size: 20px;
+}
+
+.modal .name {
+  font-size: 25px;
+  font-weight: bold;
+}

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Compra.css'
 import {Link} from 'react-router-dom'
 import Product from './Product.js'
+import Modal from './Modal.js'
+import Context from '../context/StaticContext.js'
 
 const data = [
   {id:1,nombre:"Coca-Cola",descripcion:"refresco",precio:20,cantidad:5,fotografia:"https://m.media-amazon.com/images/I/91PWew87CCL._AC_SX425_.jpg"},
@@ -17,20 +19,24 @@ const data = [
 ];
 
 function Compra() {
+  const [product, setProduct] = useState({})
   return (
-    <div className='body compra'>
-      <div className='search-bar'>
-        <form>
-          <label>Nombre del producto:</label>
-          <input type="text"/>
-          <input type="submit" className="button" value="Buscar"/>
-        </form>
-        <Link to="/" className="button return"> Regresar </Link>
+    <Context.Provider value={{product, setProduct}}>
+      <div className='body compra'>
+        <div className='search-bar'>
+          <form>
+            <label>Nombre del producto:</label>
+            <input type="text"/>
+            <input type="submit" className="button" value="Buscar"/>
+          </form>
+          <Link to="/" className="button return"> Regresar </Link>
+        </div>
+        <div className='products'>
+          { data.map(product => <Product key={product.id} info={product} />) }
+        </div>
+        <Modal />
       </div>
-      <div className='products'>
-        { data.map(product => <Product key={product.id} info={product} />) }
-      </div>
-    </div>
+    </Context.Provider>
   );
 }
 
