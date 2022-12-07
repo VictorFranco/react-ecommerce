@@ -18,7 +18,7 @@ function Modal() {
         <img alt={nombre} src={fotografia} />
         <div className='info'>
           <div className='name'>{nombre}</div>
-          <div>Descripción:<br/>{descripcion}</div>
+          <div><strong>Descripción:</strong><br/>{descripcion}</div>
         </div>
       </div>
     </div>
