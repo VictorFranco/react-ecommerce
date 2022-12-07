@@ -1,9 +1,9 @@
 import React, {useContext} from 'react'
 import './Modal.css'
-import Context from '../context/StaticContext.js'
+import ProductContext from '../context/ProductContext.js'
 
 function Modal() {
-  const context = useContext(Context)
+  const context = useContext(ProductContext)
   if (!context || Object.keys(context.product).length === 0)
     return <></>;
   const CloseModal = () => {

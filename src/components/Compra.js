@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Compra.css'
 import {Link} from 'react-router-dom'
 import Product from './Product.js'
 import Modal from './Modal.js'
-import Context from '../context/StaticContext.js'
+import {ProductContextProvider} from '../context/ProductContext.js'
 
 const data = [
   {id:1,nombre:"Coca-Cola",descripcion:"refresco",precio:20,cantidad:5,fotografia:"https://m.media-amazon.com/images/I/91PWew87CCL._AC_SX425_.jpg"},
@@ -19,9 +19,8 @@ const data = [
 ];
 
 function Compra() {
-  const [product, setProduct] = useState({})
   return (
-    <Context.Provider value={{product, setProduct}}>
+    <ProductContextProvider>
       <div className='body compra'>
         <div className='search-bar'>
           <form>
@@ -36,7 +35,7 @@ function Compra() {
         </div>
         <Modal />
       </div>
-    </Context.Provider>
+    </ProductContextProvider>
   );
 }
 

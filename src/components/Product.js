@@ -1,12 +1,12 @@
 import React, {useState, useContext} from 'react'
 import './Product.css'
-import Context from '../context/StaticContext.js'
+import ProductContext from '../context/ProductContext.js'
 
 function Product({info}) {
   const {nombre,precio,cantidad,fotografia} = info;
   const [counter, setCounter] = useState(1);
   const change_number = e => setCounter(e.target.value)
-  const context = useContext(Context)
+  const context = useContext(ProductContext)
   const OnSubmit = e => {
     e.preventDefault()
     let name = e.nativeEvent.submitter.value
