@@ -4,9 +4,11 @@ import ProductContext from '../context/ProductContext.js'
 
 function Product({info}) {
   const {nombre,precio,cantidad,fotografia} = info;
+  const foto = `data:image/jpeg;base64,${fotografia}`
   const [counter, setCounter] = useState(1);
   const change_number = e => setCounter(e.target.value)
   const context = useContext(ProductContext)
+
   const OnSubmit = e => {
     e.preventDefault()
     let name = e.nativeEvent.submitter.value
@@ -23,7 +25,7 @@ function Product({info}) {
 
   return (
     <div className='product'>
-      <img alt={nombre} src={fotografia} />
+      <img alt={nombre} src={foto} />
       <form className='info' onSubmit={OnSubmit} >
         <div>{nombre}</div>
         <div>${precio}</div>

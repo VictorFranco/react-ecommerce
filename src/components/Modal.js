@@ -9,13 +9,14 @@ function Modal() {
   const CloseModal = () => {
     context.setProduct({})
   }
-
   const {nombre,descripcion,fotografia} = context.product
+  const foto = `data:image/jpeg;base64,${fotografia}`
+
   return (
     <div className='modal'>
       <div>
         <input className='close' type="submit" value="x" onClick={CloseModal}/>
-        <img alt={nombre} src={fotografia} />
+        <img alt={nombre} src={foto} />
         <div className='info'>
           <div className='name'>{nombre}</div>
           <div><strong>Descripción:</strong><br/>{descripcion}</div>
