@@ -11,7 +11,7 @@ const AltaArticulo = data => {
     },
     body: JSON.stringify(data)
   })
-  .then(({status}) => alert(status == 200 ? "OK" : "Error"))
+  .then(({status}) => alert(status === 200 ? "OK" : "Error"))
 }
 
 const OnSubmit = e => {

@@ -30,12 +30,12 @@ function Compra() {
     <ProductContextProvider>
       <div className='body compra'>
         <div className='search-bar'>
+          <Link to="/" className="button return"> Regresar </Link>
           <form onSubmit={ConsultaArticulos}>
-            <label>Nombre del producto:</label>
-            <input name="nombre" type="text"/>
+            <input name="nombre" type="text" placeholder="Ingresa el producto a buscar"/>
             <input type="submit" className="button" value="Buscar"/>
           </form>
-          <Link to="/" className="button return"> Regresar </Link>
+          <Link to="/Carrito" className="button"> Carrito de compra </Link>
         </div>
         <div className='products'>
           { products.map(product => <Product key={product.id} info={product} />) }
