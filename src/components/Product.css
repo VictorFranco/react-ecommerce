@@ -22,6 +22,10 @@
   gap: 8px;
 }
 
+.product input[type="number"] {
+  width: 48px;
+}
+
 .product .info input[type="submit"] {
   border: None;
   box-shadow: 0 0 0 1px;
