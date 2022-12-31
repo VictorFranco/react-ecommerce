@@ -6,6 +6,7 @@ import './components/Body.css'
 import Menu from './components/Menu.js'
 import Captura from './components/Captura.js'
 import Compra from './components/Compra.js'
+import Carrito from './components/Carrito.js'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Menu />}/>
         <Route path='/Captura' element={<Captura />}/>
         <Route path='/Compra' element={<Compra />}/>
+        <Route path='/Carrito' element={<Carrito />}/>
       </Routes>
     </div>
   );
