@@ -3,7 +3,7 @@ import './Captura.css'
 import {Link} from 'react-router-dom'
 
 const AltaArticulo = data => {
-  fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/alta_articulo', {
+  fetch('https://t10-2020630109.azurewebsites.net/api/alta_articulo', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -19,10 +19,13 @@ const OnSubmit = e => {
 
   let form_data = new FormData(e.target)
   let data = Object.fromEntries(form_data)
+  if (!data.fotografia) {
+    AltaArticulo(data)
+    return;
+  }
   let reader = new FileReader();
   reader.onloadend = () => {
     data.fotografia = reader.result.split(',')[1]
-    data = {articulo: data}
     AltaArticulo(data)
   }
   reader.readAsDataURL(data.fotografia);

@@ -4,7 +4,7 @@ import ProductContext from '../context/ProductContext.js'
 
 const AgregarACarrito = (nombre, cantidad) => {
   const data = {nombre,cantidad}
-  fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/agregar_a_carrito', {
+  fetch('https://t10-2020630109.azurewebsites.net/api/agrega_a_carrito', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -14,7 +14,7 @@ const AgregarACarrito = (nombre, cantidad) => {
   })
   .then(data => {
     if (data.status === 200) alert("OK")
-    else data.json().then(({message}) => alert(message))
+    else data.json().then(e => JSON.parse(e)).then(({message}) => alert(message))
   })
 }
 

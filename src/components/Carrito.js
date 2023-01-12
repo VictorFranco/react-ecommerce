@@ -7,7 +7,7 @@ function Carrito() {
   let [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/mostrar_carrito', {
+    fetch('https://t10-2020630109.azurewebsites.net/api/mostrar_carrito', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -23,7 +23,7 @@ function Carrito() {
   const EliminarCarrito = () => {
     const result = window.confirm("¿Estás seguro de eliminar el carrito de compra?")
     if (!result) return;
-    fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/borrar_carrito', {
+    fetch('https://t10-2020630109.azurewebsites.net/api/borrar_carrito', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

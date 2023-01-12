@@ -11,7 +11,7 @@ function Product({info, context}) {
     const {products, setProducts} = context
     const data = {id}
 
-    fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/borrar_de_carrito', {
+    fetch('https://t10-2020630109.azurewebsites.net/api/borrar_de_carrito', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

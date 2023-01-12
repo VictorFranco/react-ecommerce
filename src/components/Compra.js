@@ -13,7 +13,7 @@ function Compra() {
 
     const keyword = { keyword : e.target.nombre.value }
 
-    fetch('http://172.177.11.192:8080/Ecommerce/rest/ws/consulta_articulos', {
+    fetch('https://t10-2020630109.azurewebsites.net/api/consulta_articulos', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
